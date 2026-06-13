@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Unipolares</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+<div class="nav-container">
+        <!-- Nuevo contenedor para logo y título -->
+        <div class="brand-container">
+            <img src="img/conducuyo.png" alt="Logo Empresa" class="logo">
+
+        </div>
+
+        
+        <button class="cart-btn" onclick="toggleCart()">🛒 Carrito <span id="cart-count">0</span></button>
+    </div>
+    </header>
+
+    <main class="container">
+        <section class="product-grid" id="contenedor-productos"></section>
+        
+    </main>
+
+    <!-- Sidebar del Carrito -->
+    <div id="cart-sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Tu Pedido</h2>
+            <button onclick="toggleCart()">Cerrar</button>
+        </div>
+        <div id="cart-items"></div>
+        <div class="sidebar-footer">
+            <h3>Total: $<span id="cart-total">0</span></h3>
+            <button class="btn-whatsapp" onclick="finalizarCompra()">Finalizar en WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
